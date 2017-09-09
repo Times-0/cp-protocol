@@ -5,7 +5,7 @@ __Data Type__              : `sys`
 
 __Data Type abbreviation : `system`__
 
-Different files in this section represents different values for `action`
+Different files in this section represents different values for `action` send by the client.
 
 ## General Structure
 
