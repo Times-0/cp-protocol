@@ -7,7 +7,7 @@ __Data Type abbreviation : `system`__
 
 ## General Structure
 
-```
+```xml
 <msg t='sys'>
     <body action = "ACTION*" [ t = '' ] r = '-1'> 
       [ <k><![CDATA[DATA]]></k> ]
