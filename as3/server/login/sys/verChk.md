@@ -29,3 +29,18 @@ def APIVersionCheck (client, ver):
     else:
         client.sendXML (action = 'apiKO', r = 0)
 ```
+
+## Structure Example
+```xml
+<msg t='sys'>
+  <body action='apiOK' r='0'>
+  </body>
+</msg>
+```
+
+```xml
+<msg t='sys'>
+  <body action='apiKO' r='0'>
+  </body>
+</msg>
+```
