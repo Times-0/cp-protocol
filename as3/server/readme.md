@@ -4,14 +4,12 @@ Server Packet Protocol
 ## General Packet Structure
   * ### Server Authentication / XML Packets
     These are [XML](https://www.w3schools.com/xml/) packets sent by the server, in response to client's XML/Authentication request.
-    
-	__Structure__
-    ```
-    <msg t='sys'><body action='ACTION' r='-1'><var><![CDATA[INFORMATION]]></var></body></msg>
-    ```
-  
-    Where, 
-  
+	
+    __Structure__
+	
+    ```<msg t='sys'><body action='ACTION' r='-1'><var><![CDATA[INFORMATION]]></var></body></msg>```
+	
+    Where,
     <table>
       <tr> <th> ITEM </th> <th>DESCRIPTION</th> </tr>
 	  <tr> <td> msg </td> <td> message sent, with appropriate type </td> </tr>
