@@ -32,3 +32,29 @@ def randomKey (client, request):
     random_key = client.authentication.randomKey
     client.sendXML (action = 'rndK', r = '-1', params = random_key)
 ```
+
+
+## Structure Example
+```xml
+<msg t='sys'>
+  <body action='rndK' r='-1'>
+    <k> <![CDATA[e457A?!66D]]> </k>
+  </body>
+</msg>
+```
+
+```xml
+<msg t='sys'>
+  <body action='rndK' r='-1'>
+    <k>Q##$Rvv56f</k>
+  </body>
+</msg>
+```
+
+```xml
+<msg t='sys'>
+  <body action='rndK' r='-1'>
+    <k> <![CDATA[T'"<>rrt66]]> </k>
+  </body>
+</msg>
+```
