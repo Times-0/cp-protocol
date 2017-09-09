@@ -7,7 +7,7 @@ Server Packet Protocol
     
 	__Structure__
     ```
-    <msg t='sys'><body action='ACTION' r='-1'><k><![CDATA[INFORMATION]]></k></body></msg>
+    <msg t='sys'><body action='ACTION' r='-1'><var><![CDATA[INFORMATION]]></var></body></msg>
     ```
   
     Where, 
@@ -19,7 +19,7 @@ Server Packet Protocol
 	  <tr> <td> body  </td> <td> body of the message, with Syntax matching the type of <code>msg</code> declared </td> </tr>
 	  <tr> <td> action </td> <td> main event to be performed </td> </tr>
 	  <tr> <td> r </td> <td> room-id of the server, which response to received XML data</td> </tr>
-	  <tr> <td> k </td> <td> extra information, if any, strictly following Syntax of type mentioned in <code>body</code>, if present, else type mentioned in <code>msg</code> </td> </tr>
+	  <tr> <td> var </td> <td> variable parameter containing extra information, if any, strictly following syntax of type mentioned in <code>body</code>, if present, else type mentioned in <code>msg</code> </td> </tr>
     </table> 
 	
   * ### Server Communication / XT Packets
