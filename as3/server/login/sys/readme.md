@@ -11,6 +11,7 @@ __Data Type abbreviation : `system`__
 <msg t='sys'>
     <body action = "ACTION*" [ t = '' ] r = '-1'> 
       [ <k><![CDATA[DATA]]></k> ]
+      [ <vars> <var [n=''] t=''><![CDATA[DATA]]></var> ... </vars>
 	</body>
 </msg>
 ```
