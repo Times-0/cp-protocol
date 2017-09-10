@@ -36,7 +36,34 @@ Where `ERROR_CODE`takes the following values
   <tr> <td> 601 </td> <td> Penguin is banned. Here <code>DETAILS</code> is the no of hours remaining in penguin's ban. Example, 2 hours </td> </tr>
 </table>
 
+## Usage Example
+```python
+def handlePrimaryLogin (client, username, password):
+    if not client.database.userExists (username):
+        client.sendXT ('e', 101)
+        return client.disconnect ("Username doesn't exists")
+    
+    client.username = username
+    
+    if not client.passwordHashVerify (password):
+        client.sendXT ('e', 101)
+        return client.disconnect ("Incorrect password")
+    
+    client.generateLoginDetails ()
+    
+    PENGUIN_DETAILS = '|'.join ([client.id, client.swid, client.username, password, 'NULL', '45, '2'])
+    WORLD_SERVER_DETAILS = '|'.join ('{0},{1}'.format(server.id, server.users) for server in AVAILABLE_SERVERS)
+    
+    client.sendXT ('l', PENGUIN_DETAILS, client.loginKey, client.friendsKey, WORLD_SERVER_DETAILS, client.email())
+```
+
 ## Structure Example
 ```php
 %xt%l%-1%1001|{A23D-5718-56DF-55FA}|Rick|f261819e3322898as88923bdf21673aa|NULL|45|2%16689w777937A618%122834%100,20|101,0|102,30```
+```
+```python
+%xt%e%-1%101%
+```
+```python
+%xt%e%-1%601%1.5%
 ```
