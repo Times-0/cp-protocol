@@ -38,7 +38,11 @@ def handleLogin (client, username, password, swid, loginkey):
         client.sendXT ('e', 3)
         return client.disconnect ("Penguin already in")
     
-    client.generateDetails ()
+    if client.isBanned ():
+        client.sendXT (601, client.hoursBanned ())
+        return client.disconnect ("Penguin Banned")
+         
+    client.generateDetails ()
     
     if not client.checkDetails (password, swid, loginkey):
         client.sendXT ('e', 101)
