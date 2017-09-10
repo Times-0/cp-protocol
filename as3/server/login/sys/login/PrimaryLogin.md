@@ -63,7 +63,7 @@ def handlePrimaryLogin (client, username, password):
 
 ## Structure Example
 ```php
-%xt%l%-1%1001|{A23D-5718-56DF-55FA}|Rick|f261819e3322898as88923bdf21673aa|NULL|45|2%16689w777937A618%122834%100,20|101,0|102,30
+%xt%l%-1%1001|{A23D-5718-56DF-55FA}|Rick|f261819e3322898as88923bdf21673aa|NULL|45|2%16689w777937A618%122834%100,20|101,0|102,30%p***@gmail.com%
 ```
 ```python
 %xt%e%-1%101%
