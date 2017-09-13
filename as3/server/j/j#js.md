@@ -13,11 +13,12 @@ __Category Abbreviation__ : `Join client to server`
 
 ## Successful Verification : `js` Packet Structure
 ```python
-%xt%js%-1% EPF_STATUS % MODERATOR_STATUS %
+%xt%js%-1% MEMBER_STATUS % EPF_STATUS % MODERATOR_STATUS %
 ```
 Where, 
 <table>
   <tr> <th> PARAM </th> <th> TYPE </th> <th> DESCRIPTION  </th> </tr>
+  <tr> <td> MEMBER_STATUS </td> <td> BOOLEAN INTEGER </td> <th> 1 if player has subscribed membership else 0 </th> </tr>
   <tr> <td> EPF_STATUS </td> <td> BOOLEAN INTEGER </td> <th> 1 if player is an EPF member else 0 </th> </tr>
   <tr> <td> MODERATOR_STATUS </td> <td> BOOLEAN INTEGER </td> <th> 1 if player is a moderator else 0 </th> </tr>
 </table>
@@ -37,7 +38,7 @@ def handleJoinServerRequest (client, id, password):
         return client.disconnect("Incorrect credentials")
     
     JoinedServer = client.joinServer ()
-    JoinedServer.addCallback (lambda *x: client.sendXT ('js', client.epf.getStatus (), client.mod_level))
+    JoinedServer.addCallback (lambda *x: client.sendXT ('js', client.membershipStatus (), client.epf.getStatus (), client.mod_level))
     JoinedServer.addErrback (lambda x: client.disconnect (x.getErrorMessage ()))
     
     #Rest folllows, if any thatyou want to add once login
@@ -46,17 +47,17 @@ def handleJoinServerRequest (client, id, password):
 
 ## Structure Example
 ```python
-%xt%js%-1%1%1%
+%xt%js%-1%1%1%1%
 ```
 ```python
-%xt%js%-1%1%0%
+%xt%js%-1%0%1%0%
 ```
 ```python
-%xt%js%-1%0%1%
+%xt%js%-1%1%0%1%
 ```
 ```python
-%xt%js%-1%0%0%
+%xt%js%-1%1%0%0%
 ```
 ```python
-%xt%e%-1%101%
+%xt%e%-1%1%101%
 ```
