@@ -3,7 +3,7 @@ Action `login`
 
 __Action name__ : `login`
 
-__Action abbreviation__ : `Login request`
+__Action description__ : `Login request`
 
 There are two files in this section - PrimaryLogin and WorldLogin. 
 
