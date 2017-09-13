@@ -3,7 +3,7 @@ Action `verChk`
 
 __Action name__ : `verChk`
 
-__Action abbreviation__ : `API Version Check`
+__Action description__ : `API Version Check`
 
 
 ## Flow of XML Packet
