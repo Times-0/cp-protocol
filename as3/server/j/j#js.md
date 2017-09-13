@@ -1,9 +1,9 @@
 Action `j#js`
 ============
 
-__Category Name__ : `j#js`
+__Category name__ : `j#js`
 
-__Category Abbreviation__ : `Join client to server`
+__Category description__ : `Join client to server`
 
 ## Flow of XT Packet
 1. Receive client ID, client's hashed password.
