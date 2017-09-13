@@ -3,7 +3,7 @@ Action `rndK`
 
 __Action name__ : `rndK`
 
-__Action abbreviation__ : `Request client's random key`
+__Action description__ : `Request client's random key`
 
 ## Flow of XML Packet
 1. Responses to client with the random key generated, which is used during client's password authentication process.
