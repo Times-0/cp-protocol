@@ -3,7 +3,7 @@
 
 __Data Type__              : `sys`
 
-__Data Type abbreviation : `system`__
+__Data Type description__ : `system`
 
 Different files in this section represents different values for `action` send by the client.
 
