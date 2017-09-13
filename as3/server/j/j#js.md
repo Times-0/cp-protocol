@@ -21,6 +21,7 @@ Where,
   <tr> <td> EPF_STATUS </td> <td> BOOLEAN INTEGER </td> <th> 1 if player is an EPF member else 0 </th> </tr>
   <tr> <td> MODERATOR_STATUS </td> <td> BOOLEAN INTEGER </td> <th> 1 if player is a moderator else 0 </th> </tr>
 </table>
+
 __NOTE__ : This being the only `j` packet with room internal id as `-1`
 
 ## Unsuccessful Verification : Error Packet Structure
