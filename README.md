@@ -1,6 +1,5 @@
 # Club Penguin Protocol
 ---
-**Anyone except _Zaseth_ can use this source**
 
 ### Info
 This is a project dedicated to reverse engineering the network protocol of the popular (but now defunct) online game __Club Penguin__.
